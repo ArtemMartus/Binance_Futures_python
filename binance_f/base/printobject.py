@@ -52,21 +52,10 @@ class PrintBasic:
     @staticmethod
     def print_basic(data, name=None):
         pass
-        # if name and len(name):
-            # print(str(name) + " : " + str(data))
-        # else:
-            # print(str(data))
 
     @staticmethod
     def print_basic_bool(data, name=None):
-        # bool_desc = "True"
-        # if not data:
-        #     bool_desc = "False"
         pass
-        # if name and len(name):
-            # print(str(name) + " : " + str(bool_desc))
-        # else:
-            # print(str(bool_desc))
 
     @staticmethod
     def print_obj(obj):
@@ -76,7 +65,6 @@ class PrintBasic:
         members = [attr for attr in dir(obj) if not callable(attr) and not attr.startswith("__")]
         for member_def in members:
             val_str = str(getattr(obj, member_def))
-            # print(member_def + ":" + val_str)
         return 0
 
 
@@ -84,7 +72,6 @@ class PrintList:
     @staticmethod
     def print_list_data(obj):
         if not obj:
-            # print("object is None")
             return -1
 
         if TypeCheck.get_obj_type(obj) == TYPE_LIST:
@@ -98,7 +85,6 @@ class PrintList:
     @staticmethod
     def print_origin_object(obj):
         if not obj:
-            # print("object is None")
             return -1
         obj_type = TypeCheck.get_obj_type(obj)
 
@@ -122,13 +108,9 @@ class PrintList:
         if obj_type != TYPE_LIST:
             return -2
 
-        print ("data count : ", (len(obj_list)))
-        print ("\n")
         for idx, row in enumerate(obj_list):
-            # print("data number " + (str(idx)) + " :")
             PrintList.print_origin_object(row)
-            # print("\n")
-        # print("\n\n")
+
 
         return 0
 
@@ -141,13 +123,9 @@ class PrintList:
         if obj_type != TYPE_DICT:
             return -2
 
-        print ("data count : ", (len(obj_dict)))
-        print ("\n")
         for key, row in obj_dict.items():
             PrintBasic.print_basic(str(key) + " :")
             PrintList.print_origin_object(row)
-            # print("\n")
-        # print("\n\n")
 
         return 0
 
@@ -156,7 +134,6 @@ class PrintMix:
     @staticmethod
     def print_data(data):
         if not data:
-            print (sys._getframe().f_code.co_name + " none data")
             return -1
 
         obj_type = TypeCheck.get_obj_type(data)
@@ -172,7 +149,6 @@ class PrintMix:
         elif obj_type == TYPE_OBJECT:
             PrintList.print_origin_object(data)
         else:
-            print (sys._getframe().f_code.co_name + " enter unknown")
             return -2
 
         return 0
@@ -198,14 +174,6 @@ if __name__ == "__main__":
     symbol_dict = {"one": symbol_1, "two": symbol_2, "three": symbol_3}
     PrintMix.print_data(symbol_list)
     PrintMix.print_data(symbol_dict)
-
-    # print(type(symbol_list) == list)
-    # print(type(symbol_dict) == dict)
-    # print(type(symbol_list) == object)
-    # print(isinstance(symbol_list, list))
-    # print(isinstance(symbol_list, object))
-    # print(isinstance(symbol_dict, dict))
-    # print(isinstance(symbol_dict, object))
     """
 
     a=['s', 'h', 'i']

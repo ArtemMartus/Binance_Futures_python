@@ -17,18 +17,14 @@ sub_client = SubscriptionClient(api_key=g_api_key, secret_key=g_secret_key)
 
 def callback(data_type: 'SubscribeMessageType', event: 'any'):
     if data_type == SubscribeMessageType.RESPONSE:
-        # print("Event ID: ", event)
+        pass
     elif  data_type == SubscribeMessageType.PAYLOAD:
         for item in event:
             PrintBasic.print_obj(item)
-            # print("")
-        # sub_client.unsubscribe_all()
-    else:
-        # print("Unknown Data:")
-    # print()
+
 
 
 def error(e: 'BinanceApiException'):
-    # print(e.error_code + e.error_message)
+    pass
 
 sub_client.subscribe_all_ticker_event(callback, error)

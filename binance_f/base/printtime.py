@@ -13,10 +13,8 @@ class PrintDate:
             ts_minsecond = int(ts_minsecond)
             time_local = time.localtime(int(ts_minsecond / 1000))
             dt = time.strftime("%Y-%m-%d %H:%M:%S", time_local)
-            # print("ping " + str(ts_minsecond) + ":" + dt)
         except Exception as e:
             pass
-            # print(e)
 
 if __name__ == "__main__":
     ping_ts = 1569319465421

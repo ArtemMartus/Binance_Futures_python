@@ -5,7 +5,6 @@ from binance_d.impl.utils.apisignature import create_signature_with_query
 from binance_d.impl.utils.inputchecker import *
 from binance_d.impl.utils.timeservice import *
 from binance_d.model import *
-# For develop
 from binance_d.base.printobject import *
 
 
@@ -31,11 +30,7 @@ class RestApiRequestImpl(object):
         request.header.update({'Content-Type': 'application/json'})
         request.header.update({"X-MBX-APIKEY": self.__api_key})
         request.url = url + "?" + builder.build_url()
-         # For develop
-        # print("====== Request ======")
-        # print(request)
         PrintMix.print_data(request)
-        # print("=====================")
         return request
 
     def __create_request_by_post_with_signature(self, url, builder):
@@ -49,11 +44,7 @@ class RestApiRequestImpl(object):
         request.header.update({"X-MBX-APIKEY": self.__api_key})
         request.post_body = builder.post_map
         request.url = url + "?" + builder.build_url()
-        # For develop
-        # print("====== Request ======")
-        # print(request)
         PrintMix.print_data(request)
-        # print("=====================")
         return request
 
     def __create_request_by_delete_with_signature(self, url, builder):
@@ -66,11 +57,7 @@ class RestApiRequestImpl(object):
         request.header.update({'Content-Type': 'application/json'})
         request.header.update({"X-MBX-APIKEY": self.__api_key})
         request.url = url + "?" + builder.build_url()
-        # For develop
-        # print("====== Request ======")
-        # print(request)
         PrintMix.print_data(request)
-        # print("=====================")
         return request
 
     def __create_request_by_get_with_signature(self, url, builder):
@@ -83,11 +70,7 @@ class RestApiRequestImpl(object):
         request.header.update({"Content-Type": "application/x-www-form-urlencoded"})
         request.header.update({"X-MBX-APIKEY": self.__api_key})
         request.url = url + "?" + builder.build_url()
-        # For develop
-        # print("====== Request ======")
-        # print(request)
         PrintMix.print_data(request)
-        # print("=====================")
         return request
 
     def __create_request_by_put_with_signature(self, url, builder):
@@ -100,11 +83,7 @@ class RestApiRequestImpl(object):
         request.header.update({'Content-Type': 'application/json'})
         request.header.update({"X-MBX-APIKEY": self.__api_key})
         request.url = url + "?" + builder.build_url()
-        # For develop
-        # print("====== Request ======")
-        # print(request)
         PrintMix.print_data(request)
-        # print("=====================")
         return request
         
     def get_servertime(self):
@@ -390,7 +369,6 @@ class RestApiRequestImpl(object):
 
         def parse(json_wrapper):
             result = list()
-            # print('datalist')
             data_list = json_wrapper.convert_2_array()
             for item in data_list.get_items():
                 element = SymbolOrderBook.json_parse(item)
