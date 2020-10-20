@@ -51,20 +51,21 @@ class TypeCheck:
 class PrintBasic:
     @staticmethod
     def print_basic(data, name=None):
-        if name and len(name):
+        pass
+        # if name and len(name):
             # print(str(name) + " : " + str(data))
-        else:
+        # else:
             # print(str(data))
 
     @staticmethod
     def print_basic_bool(data, name=None):
-        bool_desc = "True"
-        if not data:
-            bool_desc = "False"
-
-        if name and len(name):
+        # bool_desc = "True"
+        # if not data:
+        #     bool_desc = "False"
+        pass
+        # if name and len(name):
             # print(str(name) + " : " + str(bool_desc))
-        else:
+        # else:
             # print(str(bool_desc))
 
     @staticmethod

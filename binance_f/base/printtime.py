@@ -15,6 +15,7 @@ class PrintDate:
             dt = time.strftime("%Y-%m-%d %H:%M:%S", time_local)
             # print("ping " + str(ts_minsecond) + ":" + dt)
         except Exception as e:
+            pass
             # print(e)
 
 if __name__ == "__main__":
