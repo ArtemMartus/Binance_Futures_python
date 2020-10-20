@@ -52,9 +52,9 @@ class PrintBasic:
     @staticmethod
     def print_basic(data, name=None):
         if name and len(name):
-            print(str(name) + " : " + str(data))
+            # print(str(name) + " : " + str(data))
         else:
-            print(str(data))
+            # print(str(data))
 
     @staticmethod
     def print_basic_bool(data, name=None):
@@ -63,9 +63,9 @@ class PrintBasic:
             bool_desc = "False"
 
         if name and len(name):
-            print(str(name) + " : " + str(bool_desc))
+            # print(str(name) + " : " + str(bool_desc))
         else:
-            print(str(bool_desc))
+            # print(str(bool_desc))
 
     @staticmethod
     def print_obj(obj):
@@ -75,7 +75,7 @@ class PrintBasic:
         members = [attr for attr in dir(obj) if not callable(attr) and not attr.startswith("__")]
         for member_def in members:
             val_str = str(getattr(obj, member_def))
-            print(member_def + ":" + val_str)
+            # print(member_def + ":" + val_str)
         return 0
 
 
@@ -83,7 +83,7 @@ class PrintList:
     @staticmethod
     def print_list_data(obj):
         if not obj:
-            print("object is None")
+            # print("object is None")
             return -1
 
         if TypeCheck.get_obj_type(obj) == TYPE_LIST:
@@ -97,7 +97,7 @@ class PrintList:
     @staticmethod
     def print_origin_object(obj):
         if not obj:
-            print("object is None")
+            # print("object is None")
             return -1
         obj_type = TypeCheck.get_obj_type(obj)
 
@@ -124,10 +124,10 @@ class PrintList:
         print ("data count : ", (len(obj_list)))
         print ("\n")
         for idx, row in enumerate(obj_list):
-            print("data number " + (str(idx)) + " :")
+            # print("data number " + (str(idx)) + " :")
             PrintList.print_origin_object(row)
-            print("\n")
-        print("\n\n")
+            # print("\n")
+        # print("\n\n")
 
         return 0
 
@@ -145,8 +145,8 @@ class PrintList:
         for key, row in obj_dict.items():
             PrintBasic.print_basic(str(key) + " :")
             PrintList.print_origin_object(row)
-            print("\n")
-        print("\n\n")
+            # print("\n")
+        # print("\n\n")
 
         return 0
 
@@ -198,13 +198,13 @@ if __name__ == "__main__":
     PrintMix.print_data(symbol_list)
     PrintMix.print_data(symbol_dict)
 
-    print(type(symbol_list) == list)
-    print(type(symbol_dict) == dict)
-    print(type(symbol_list) == object)
-    print(isinstance(symbol_list, list))
-    print(isinstance(symbol_list, object))
-    print(isinstance(symbol_dict, dict))
-    print(isinstance(symbol_dict, object))
+    # print(type(symbol_list) == list)
+    # print(type(symbol_dict) == dict)
+    # print(type(symbol_list) == object)
+    # print(isinstance(symbol_list, list))
+    # print(isinstance(symbol_list, object))
+    # print(isinstance(symbol_dict, dict))
+    # print(isinstance(symbol_dict, object))
     """
 
     a=['s', 'h', 'i']
