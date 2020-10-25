@@ -15,13 +15,13 @@ class Asset:
     def json_parse(json_data):
         result = Asset()
         result.asset = json_data.get_string("asset")
-        result.initialMargin = json_data.get_float("initialMargin")
-        result.maintMargin = json_data.get_float("maintMargin")
-        result.marginBalance = json_data.get_float("marginBalance")
-        result.maxWithdrawAmount = json_data.get_float("maxWithdrawAmount")
-        result.openOrderInitialMargin = json_data.get_float("openOrderInitialMargin")
-        result.positionInitialMargin = json_data.get_float("positionInitialMargin")
-        result.unrealizedProfit = json_data.get_float("unrealizedProfit")
+        result.initialMargin = json_data.get_string("initialMargin")
+        result.maintMargin = json_data.get_string("maintMargin")
+        result.marginBalance = json_data.get_string("marginBalance")
+        result.maxWithdrawAmount = json_data.get_string("maxWithdrawAmount")
+        result.openOrderInitialMargin = json_data.get_string("openOrderInitialMargin")
+        result.positionInitialMargin = json_data.get_string("positionInitialMargin")
+        result.unrealizedProfit = json_data.get_string("unrealizedProfit")
         return result
 
 

@@ -11,7 +11,7 @@ class Balance:
         result = Balance()
         result.asset = json_data.get_string("asset")
         result.accountAlias = json_data.get_string("accountAlias")
-        result.balance = json_data.get_float("balance")
-        result.withdrawAvailable = json_data.get_float("withdrawAvailable")
+        result.balance = json_data.get_string("balance")
+        result.withdrawAvailable = json_data.get_string("withdrawAvailable")
 
         return result
