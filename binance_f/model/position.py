@@ -1,17 +1,17 @@
 class Position:
 
     def __init__(self):
-        self.entryPrice = 0.0
+        self.entryPrice = ""
         self.isAutoAddMargin = False
-        self.leverage = 0.0
-        self.maxNotionalValue = 0.0
-        self.liquidationPrice = 0.0
-        self.markPrice = 0.0
-        self.positionAmt = 0.0
+        self.leverage = ""
+        self.maxNotionalValue = ""
+        self.liquidationPrice = ""
+        self.markPrice = ""
+        self.positionAmt = ""
         self.symbol = ""
-        self.unrealizedProfit = 0.0
+        self.unrealizedProfit = ""
         self.marginType = ""
-        self.isolatedMargin = 0.0
+        self.isolatedMargin = ""
         self.positionSide = ""
 
 

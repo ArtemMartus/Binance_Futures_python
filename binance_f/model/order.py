@@ -2,7 +2,7 @@ class Order:
 
     def __init__(self):
         self.clientOrderId = ""
-        self.cumQuote = 0.0
+        self.cumQuote = ""
         self.executedQty = None
         self.orderId = None
         self.origQty = None
@@ -16,7 +16,7 @@ class Order:
         self.type = None
         self.updateTime = 0
         self.workingType = ""
-        self.avgPrice = 0.0
+        self.avgPrice = ""
         self.origType = ""
         self.positionSide = ""
         self.activatePrice = None

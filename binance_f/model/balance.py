@@ -3,8 +3,8 @@ class Balance:
     def __init__(self):
         self.asset = ""
         self.accountAlias = ""
-        self.balance = 0.0
-        self.withdrawAvailable = 0.0
+        self.balance = ""
+        self.withdrawAvailable = ""
 
     @staticmethod
     def json_parse(json_data):

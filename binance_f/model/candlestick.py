@@ -1,18 +1,18 @@
 class Candlestick:
 
     def __init__(self):
-        self.openTime = 0
-        self.open = 0.0
-        self.high = 0.0
-        self.low = 0.0
-        self.close = 0.0
-        self.volume = 0.0
-        self.closeTime = 0
-        self.quoteAssetVolume = 0.0
-        self.numTrades = 0
-        self.takerBuyBaseAssetVolume = 0.0
-        self.takerBuyQuoteAssetVolume = 0.0
-        self.ignore = 0.0
+        self.openTime = ""
+        self.open = ""
+        self.high = ""
+        self.low = ""
+        self.close = ""
+        self.volume = ""
+        self.closeTime = ""
+        self.quoteAssetVolume = ""
+        self.numTrades = ""
+        self.takerBuyBaseAssetVolume = ""
+        self.takerBuyQuoteAssetVolume = ""
+        self.ignore = ""
 
     @staticmethod
     def json_parse(json_data):
